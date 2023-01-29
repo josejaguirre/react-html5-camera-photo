@@ -18,11 +18,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mabelanger/react-html5-camera-photo"
+    "url": "https://github.com/josejaguirre/react-html5-camera-photo"
   },
   "author": "Michel-Alexandre Belanger <michel.alexandre.belanger@gmail.com> (https://github.com/mabelanger)",
   "bugs": {
-    "url": "https://github.com/mabelanger/react-html5-camera-photo/issues"
+    "url": "https://github.com/josejaguirre/react-html5-camera-photo/issues"
   },
   "keywords": [
     "react",

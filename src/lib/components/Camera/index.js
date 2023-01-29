@@ -185,11 +185,11 @@ Camera.propTypes = {
   onCameraStart: PropTypes.func,
   onCameraStop: PropTypes.func,
   triggerTakePhoto: PropTypes.bool,
-  disableButton: PropTypes.bool,
+  disableButton: PropTypes.bool
 };
 
 Camera.defaultProps = {
   isDisplayStartCameraError: true,
   triggerTakePhoto: false,
-  disableButton: false,
+  disableButton: false
 };
