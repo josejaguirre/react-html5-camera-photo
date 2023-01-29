@@ -29,6 +29,7 @@ function Camera (props) {
   const [dataUri, setDataUri] = useState('');
   const [isShowVideo, setIsShowVideo] = useState(true);
   const [cameraStartDisplayError, setCameraStartDisplayError] = useState('');
+  const { triggerTakePhoto } = props;
 
   let videoRef = useRef(null);
 
@@ -50,6 +51,12 @@ function Camera (props) {
       }
     }
   }, [mediaStream]);
+
+  useEffect(() => {
+    if (triggerTakePhoto) {
+      handleTakePhoto();
+    }
+  }, [triggerTakePhoto]);
 
   useEffect(() => {
     if (cameraStartError) {
@@ -174,7 +181,8 @@ Camera.propTypes = {
   isFullscreen: PropTypes.bool,
   sizeFactor: PropTypes.number,
   onCameraStart: PropTypes.func,
-  onCameraStop: PropTypes.func
+  onCameraStop: PropTypes.func,
+  triggerTakePhoto: PropTypes.bool,
 };
 
 Camera.defaultProps = {
