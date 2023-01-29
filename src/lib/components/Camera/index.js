@@ -150,10 +150,12 @@ function Camera (props) {
         muted={true}
         playsInline
       />
-      <CircleButton
-        isClicked={!isShowVideo}
-        onClick={handleTakePhoto}
-      />
+      {!props.disableButton && (
+        <CircleButton
+          isClicked={!isShowVideo}
+          onClick={handleTakePhoto}
+        />
+      )}
     </div>
   );
 }
@@ -183,8 +185,11 @@ Camera.propTypes = {
   onCameraStart: PropTypes.func,
   onCameraStop: PropTypes.func,
   triggerTakePhoto: PropTypes.bool,
+  disableButton: PropTypes.bool,
 };
 
 Camera.defaultProps = {
-  isDisplayStartCameraError: true
+  isDisplayStartCameraError: true,
+  triggerTakePhoto: false,
+  disableButton: false,
 };
