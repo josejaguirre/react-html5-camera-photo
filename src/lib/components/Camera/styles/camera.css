@@ -3,6 +3,13 @@
   text-align: center;
 }
 
+.react-html5-camera-photo-layer {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
 .react-html5-camera-photo > video {
   width: 768px;
 }
