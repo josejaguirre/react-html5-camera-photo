@@ -128,10 +128,10 @@ function Camera (props) {
   let showHideImgStyle = getShowHideStyle(!isShowVideo);
 
   let classNameFullscreen = props.isFullscreen ? 'react-html5-camera-photo-fullscreen' : '';
-  const classLayer = props.hasLayer ? 'react-html5-camera-photo-layer' : '';
+  const isSelfie = props.isSelfie ? 'react-html5-camera-photo-layer-selfie' : 'react-html5-camera-photo-layer';
 
   return (
-    <div className={'react-html5-camera-photo ' + classNameFullscreen + ' ' + classLayer}>
+    <div className={'react-html5-camera-photo ' + classNameFullscreen + ' ' + isSelfie}>
       <DisplayError
         cssClass={'display-error'}
         isDisplayError={props.isDisplayStartCameraError}
@@ -188,12 +188,12 @@ Camera.propTypes = {
   onCameraStop: PropTypes.func,
   triggerTakePhoto: PropTypes.bool,
   disableButton: PropTypes.bool,
-  hasLayer: PropTypes.bool
+  isSelfie: PropTypes.bool
 };
 
 Camera.defaultProps = {
   isDisplayStartCameraError: true,
   triggerTakePhoto: false,
   disableButton: false,
-  hasLayer: false
+  isSelfie: false
 };
