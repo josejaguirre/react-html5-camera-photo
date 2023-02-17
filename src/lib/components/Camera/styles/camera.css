@@ -11,23 +11,33 @@
 }
 
 .react-html5-camera-photo-layer-selfie > video {
+  object-fit: cover;
+  width: 100%;
   height: 100%;
 }
 
 .react-html5-camera-photo-layer-selfie > img {
+  object-fit: cover;
+  width: 100%;
   height: 100%;
 }
 
 .react-html5-camera-photo-layer > video {
-  width: 768px;
+  overflow: hidden;
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
 }
 
 .react-html5-camera-photo-layer > img {
-  width: 768px;
+  overflow: hidden;
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
 }
 
 .react-html5-camera-photo-layer > .display-error {
-  width: 768px;
+  width: 100%;
   margin: 0 auto;
 }
 
