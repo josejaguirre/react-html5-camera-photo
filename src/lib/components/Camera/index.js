@@ -29,7 +29,7 @@ function Camera (props) {
   const [dataUri, setDataUri] = useState('');
   const [isShowVideo, setIsShowVideo] = useState(true);
   const [cameraStartDisplayError, setCameraStartDisplayError] = useState('');
-  const { triggerTakePhoto } = props;
+  const { triggerTakePhoto, isLandscapeMode } = props;
 
   let videoRef = useRef(null);
 
@@ -124,7 +124,10 @@ function Camera (props) {
     }, 900);
   }
 
-  let videoStyles = getVideoStyles(isShowVideo, getIsImageMirror());
+  const landscapeStyle = isLandscapeMode ? { transform: 'rotate(90deg)' } : {
+    transform: 'none'};
+  let videoStyles = {
+    ...getVideoStyles(isShowVideo, getIsImageMirror()), ...landscapeStyle};
   let showHideImgStyle = getShowHideStyle(!isShowVideo);
 
   let classNameFullscreen = props.isFullscreen ? 'react-html5-camera-photo-fullscreen' : '';
@@ -188,12 +191,14 @@ Camera.propTypes = {
   onCameraStop: PropTypes.func,
   triggerTakePhoto: PropTypes.bool,
   disableButton: PropTypes.bool,
-  isSelfie: PropTypes.bool
+  isSelfie: PropTypes.bool,
+  isLandscapeMode: PropTypes.bool
 };
 
 Camera.defaultProps = {
   isDisplayStartCameraError: true,
   triggerTakePhoto: false,
   disableButton: false,
-  isSelfie: false
+  isSelfie: false,
+  isLandscapeMode: false
 };
