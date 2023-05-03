@@ -1,6 +1,6 @@
 {
   "name": "react-camera-photo",
-  "version": "1.5.16",
+  "version": "1.5.17",
   "description": "React.js HTML5 Camera Photo",
   "main": "build/index.js",
   "scripts": {
@@ -32,7 +32,7 @@
     "photo",
     "component"
   ],
-  "homepage": "https://mabelanger.github.io/react-html5-camera-photo/",
+  "homepage": "https://www.npmjs.com/package/react-camera-photo",
   "license": "MIT",
   "dependencies": {
     "jslib-html5-camera-photo": "3.3.4"

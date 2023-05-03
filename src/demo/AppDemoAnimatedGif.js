@@ -14,6 +14,7 @@ function App (props) {
         // <div style={{ backgroundColor: 'white' }}>v3</div>
       }
       <Camera
+        isLandscapeMode
         onTakePhoto={(dataUri) => { handleTakePhoto(dataUri); }}
         idealFacingMode={FACING_MODES.ENVIRONMENT}
       />
